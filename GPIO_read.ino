@@ -6,7 +6,7 @@ void setup() {
 }
 
 void loop() {
-  IOstate = digitalread(inputPin);
+ int IOstate = digitalRead(inputPin);
   Serial.println(IOstate);
   delay(200); // delay 200ms for next GPIO read
 }
