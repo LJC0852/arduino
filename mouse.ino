@@ -68,7 +68,7 @@ void loop() {
   
   button1state = digitalRead(button1); //讀出button1的狀態
   if(button1state == HIGH) //當按鈕放開
-    bleMouse.move(compAngleY,compAngleX,0); // 鼠標移動
+    bleMouse.move(compAngleY,compAngleX,0); // 鼠標移動(由於MPU6050反著裝所以我把XY顛倒)
   else
     bleMouse.move(0,0,0.3*compAngleY); //頁面滾動
  
